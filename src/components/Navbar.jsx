@@ -5,7 +5,11 @@ export default function Nav() {
   const loc = useLocation();
   return (
     <header className="nav container">
-      <div className="logo">
+      <Link
+        to="/"
+        className="logo"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
         <span className="mark" />
         <div>
           Myntra{" "}
@@ -13,7 +17,7 @@ export default function Nav() {
             Sustainable
           </span>
         </div>
-      </div>
+      </Link>
       <nav className="nav-links">
         <Link
           to="/"
@@ -49,9 +53,9 @@ export default function Nav() {
         >
           Market
         </Link>
-        <button className="btn" style={{ marginLeft: 12 }}>
-          Get Involved
-        </button>
+        <Link to="/recycle" style={{ marginLeft: 12 }}>
+          <button className="btn">Get Involved</button>
+        </Link>
       </nav>
     </header>
   );
